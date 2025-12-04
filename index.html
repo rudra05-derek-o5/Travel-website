@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DreamWay Travels</title>
+  <style>
+    /* Basic reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.5;
+    }
+
+    header {
+      background-color: #008cba;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      margin-bottom: 5px;
+    }
+
+    header p {
+      font-size: 14px;
+    }
+
+    nav {
+      background-color: #006f95;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: 20px auto;
+    }
+
+    /* Hero Section */
+    .hero {
+      background-image: url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80");
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 60px 20px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 32px;
+      margin-bottom: 10px;
+      text-shadow: 1px 1px 3px black;
+    }
+
+    .hero p {
+      font-size: 16px;
+      max-width: 600px;
+      margin: 0 auto;
+      text-shadow: 1px 1px 2px black;
+    }
+
+    /* Section Titles */
+    h2.section-title {
+      margin: 30px 0 10px 0;
+      font-size: 24px;
+      color: #008cba;
+      border-left: 4px solid #008cba;
+      padding-left: 10px;
+    }
+
+    /* Tour Packages */
+    .packages {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .package-card {
+      background-color: white;
+      border-radius: 8px;
+      padding: 10px;
+      flex: 1 1 250px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+
+    .package-card img {
+      width: 100%;
+      border-radius: 6px;
+      height: 160px;
+      object-fit: cover;
+      margin-bottom: 8px;
+    }
+
+    .package-card h3 {
+      margin-bottom: 5px;
+      font-size: 18px;
+    }
+
+    .package-card p {
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #008cba;
+      font-size: 14px;
+    }
+
+    /* Booking Form */
+    .booking-form {
+      background-color: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+
+    .booking-form label {
+      display: block;
+      margin: 8px 0 3px 0;
+      font-size: 14px;
+    }
+
+    .booking-form input,
+    .booking-form select,
+    .booking-form textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+
+    .booking-form button {
+      background-color: #008cba;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 14px;
+      border-radius: 4px;
+    }
+
+    .booking-form button:hover {
+      background-color: #006f95;
+      cursor: pointer;
+    }
+
+    /* Travel Tips */
+    .tips-list {
+      background-color: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+
+    .tips-list ul {
+      margin-left: 20px;
+      margin-top: 5px;
+    }
+
+    .tips-list li {
+      margin-bottom: 6px;
+      font-size: 14px;
+    }
+
+    /* Gallery */
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+
+    .gallery img {
+      width: 100%;
+      max-width: 230px;
+      border-radius: 6px;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    footer {
+      background-color: #008cba;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 13px;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 600px) {
+      .hero h2 {
+        font-size: 24px;
+      }
+      .hero p {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>DreamWay Travels</h1>
+    <p>Your journey, our responsibility.</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#packages">Tour Packages</a>
+    <a href="#booking">Booking</a>
+    <a href="#tips">Travel Tips</a>
+    <a href="#gallery">Gallery</a>
+  </nav>
+
+  <div class="container">
+    <!-- Hero Section -->
+    <section class="hero">
+      <h2>Explore the World with Us</h2>
+      <p>Find the best tour packages, easy bookings, and helpful travel tips for your next adventure.</p>
+    </section>
+
+    <!-- Tour Packages -->
+    <h2 id="packages" class="section-title">Popular Tour Packages</h2>
+    <section class="packages">
+      <div class="package-card">
+        <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80" alt="Beach Holiday">
+        <h3>Goa Beach Getaway</h3>
+        <p>3 Nights / 4 Days. Enjoy sandy beaches, sunsets, and water sports.</p>
+        <p class="price">Starting from ₹12,999</p>
+      </div>
+
+      <div class="package-card">
+        <img src="https://images.unsplash.com/photo-1533107862482-0e6974b06ec4?auto=format&fit=crop&w=800&q=80" alt="Mountain Trip">
+        <h3>Himalayan Adventure</h3>
+        <p>5 Nights / 6 Days. Trekking, camping, and breathtaking mountain views.</p>
+        <p class="price">Starting from ₹18,499</p>
+      </div>
+
+      <div class="package-card">
+        <img src="https://images.unsplash.com/photo-1534278931828-8f887aa23a35?auto=format&fit=crop&w=800&q=80" alt="City Tour">
+        <h3>Europe City Tour</h3>
+        <p>7 Nights / 8 Days. Visit Paris, Rome, and Amsterdam in one trip.</p>
+        <p class="price">Starting from ₹89,999</p>
+      </div>
+    </section>
+
+    <!-- Booking Form -->
+    <h2 id="booking" class="section-title">Book Your Trip</h2>
+    <section class="booking-form">
+      <form>
+        <label for="name">Full Name</label>
+        <input id="name" type="text" placeholder="Enter your name" required>
+
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="Enter your email" required>
+
+        <label for="phone">Phone</label>
+        <input id="phone" type="tel" placeholder="Enter your phone number" required>
+
+        <label for="destination">Select Package</label>
+        <select id="destination">
+          <option>Goa Beach Getaway</option>
+          <option>Himalayan Adventure</option>
+          <option>Europe City Tour</option>
+        </select>
+
+        <label for="date">Travel Date</label>
+        <input id="date" type="date">
+
+        <label for="message">Special Requests</label>
+        <textarea id="message" rows="3" placeholder="Anything we should know?"></textarea>
+
+        <button type="submit">Submit Booking</button>
+      </form>
+    </section>
+
+    <!-- Travel Tips -->
+    <h2 id="tips" class="section-title">Travel Tips</h2>
+    <section class="tips-list">
+      <ul>
+        <li>Always keep a copy of your ID and important documents.</li>
+        <li>Carry a small first-aid kit for emergencies.</li>
+        <li>Check weather conditions before packing your clothes.</li>
+        <li>Inform your family or friends about your travel plans.</li>
+        <li>Keep your money and valuables in different places.</li>
+      </ul>
+    </section>
+
+    <!-- Gallery -->
+    <h2 id="gallery" class="section-title">Destination Gallery</h2>
+    <section class="gallery">
+      <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=800&q=80" alt="Beach">
+      <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=800&q=80" alt="Mountains">
+      <img src="https://images.unsplash.com/photo-1428342319217-5fdaf6d7898e?auto=format&fit=crop&w=800&q=80" alt="City">
+      <img src="https://images.unsplash.com/photo-1500534314211-0a24cd03f2c0?auto=format&fit=crop&w=800&q=80" alt="Island">
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 DreamWay Travels | Email: contact@dreamwaytravels.com | Phone: +91-98765-43210</p>
+  </footer>
+
+</body>
+</html>
